@@ -12,6 +12,8 @@ class Department:
             self.managers = []
 
     def add_manager(self, manager : Manager):
+        # Please refactor this code applying the same validation order pattern as we used in the add_team_member method of class Manager (line 22)
+        # (erify that no Manager exists with these first and last names)
         if manager in self.managers:
             raise ValueError("The manager is already in the department.")
         else:

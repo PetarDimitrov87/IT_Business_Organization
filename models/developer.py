@@ -11,6 +11,8 @@ class Developer(Employee):
         return data
 
     @classmethod
+    # No need to override this method
+    # If the method does exactly the same thing, there's no need to override it - the parent's method will work correctly with the child class.
     def from_dictionary(cls, data):
         return cls(
             data["first_name"],

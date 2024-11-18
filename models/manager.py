@@ -17,7 +17,8 @@ class Manager(Employee):
 
         if 5 < team_size <= 10:
             salary += 200
-
+        # here it would be better use elif
+        # It's more efficient - if the first condition is true, it won't check the second condition unnecessarily
         if team_size > 10:
             salary += 300
 
@@ -37,7 +38,7 @@ class Manager(Employee):
             self.team.append(member)
         else:
             raise TypeError("Only developers and designers can be members of the team.")
-
+        # here it would be better check if Developer or Designer with certain first and last name already presents in team
         if member in self.team:
             raise ValueError("The member is already in the team.")
 
